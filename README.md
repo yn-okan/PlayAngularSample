@@ -1,1 +1,1 @@
-# PlayAngularSample
+Playframework + Angular2でのサンプル。学習用。

@@ -1,0 +1,5 @@
+GET           /todo            controllers.api.TodoController.list
+GET           /todo/:id        controllers.api.TodoController.detail(id: Long)
+POST          /todo            controllers.api.TodoController.create
+PUT           /todo/:id        controllers.api.TodoController.update(id: Long)
+DELETE        /todo/:id        controllers.api.TodoController.delete(id: Long)
