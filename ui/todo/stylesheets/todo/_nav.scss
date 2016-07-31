@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+nav {
+  background-color: #3F51B5 !important;
+  padding: 10px;
+  margin-top: 40px;
+
+  .app-title {
+    color: #fff !important;
+    font-size: 1.8em;
+    margin: 0 15px 0 0;
+  }
+
+  .navbar-nav {
+    .nav-item {
+      a {
+        color: #98a1d2;
+        display: inline-block;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover, &:focus {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

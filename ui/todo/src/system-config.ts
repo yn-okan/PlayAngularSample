@@ -7,10 +7,18 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'jquery': 'vendor/jquery/dist/jquery.js',
+  'underscore': 'vendor/underscore/underscore.js'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'moment':{
+    format: 'cjs'
+  },
+  'underscore':{
+    format: 'cjs'
+  },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

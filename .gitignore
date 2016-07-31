@@ -8,3 +8,4 @@ target
 /RUNNING_PID
 node_modules
 /public/dist
+/public/fonts

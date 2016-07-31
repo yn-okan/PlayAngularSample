@@ -38,6 +38,7 @@ public class TodoController extends Controller {
 
     /**
      * TODOを更新する。
+     *
      * @param id ID
      * @return TODO詳細情報
      */
@@ -45,8 +46,14 @@ public class TodoController extends Controller {
         return ok(new DetailResponse().toJson());
     }
 
+    /**
+     * TODOを削除する。
+     *
+     * @param id ID
+     * @return TODO詳細情報
+     */
     public Result delete(Long id) {
-        return ok();
+        return ok(new DetailResponse().toJson());
     }
 
 }

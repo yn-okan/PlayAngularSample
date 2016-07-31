@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, URLSearchParams } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
 import { Todo } from '../model/todo';
+import { Page } from '../model/page';
 
 @Injectable()
 export class TodoService {
@@ -12,12 +13,18 @@ export class TodoService {
 
   /**
    * TODO一覧を取得する。
+   *
+   * @param options オプション
    * @returns TODO一覧
    */
-  getList(): Promise<Todo[]> {
-    return this.http.get('/api/todo')
+  getList(options: any): Promise<Page<Todo>> {
+    var params = new URLSearchParams();
+    params.set('page', options.page);
+    params.set('limit', options.limit);
+
+    return this.http.get('/api/todo', { search: params })
       .toPromise()
-      .then(response => response.json().items)
+      .then(response => response.json())
       .catch(this.handleError);
   }
 
@@ -48,6 +55,13 @@ export class TodoService {
     return this.http.put('/api/todo/' + todo.id, {
       body: todo
     }).toPromise()
+      .then(response => response.json().data)
+      .catch(this.handleError);
+  }
+
+  delete(id: number): Promise<Todo> {
+    return this.http.delete('/api/todo/' + id)
+      .toPromise()
       .then(response => response.json().data)
       .catch(this.handleError);
   }

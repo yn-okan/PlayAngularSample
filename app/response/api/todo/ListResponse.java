@@ -14,7 +14,7 @@ public class ListResponse extends JsonResponse {
     public ListResponse() {
         super(true);
         putItems(format());
-        putTotal(3);
+        putTotal(15);
     }
 
     private List<Item> format() {
@@ -25,23 +25,13 @@ public class ListResponse extends JsonResponse {
 
         Item item;
 
-        item = new Item(1L);
-        item.put("content", "TODO内容1");
-        item.put("created", created);
-        item.put("updated", updated);
-        items.add(item);
-
-        item = new Item(2L);
-        item.put("content", "TODO内容2");
-        item.put("created", created);
-        item.put("updated", updated);
-        items.add(item);
-
-        item = new Item(3L);
-        item.put("content", "TODO内容3");
-        item.put("created", created);
-        item.put("updated", updated);
-        items.add(item);
+        for (int n = 1; n <= 10; n++) {
+            item = new Item((long)n);
+            item.put("content", "TODO内容" + n + "：■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+            item.put("created", created);
+            item.put("updated", updated);
+            items.add(item);
+        }
 
         return items;
     }

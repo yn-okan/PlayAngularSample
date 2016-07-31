@@ -17,6 +17,7 @@ module.exports = function (config) {
       }
     },
     files: [
+      { pattern: 'dist/vendor/jquery/dist/jquery.js', included: true, watched: false },
       { pattern: 'dist/vendor/es6-shim/es6-shim.js', included: true, watched: false },
       { pattern: 'dist/vendor/zone.js/dist/zone.js', included: true, watched: false },
       { pattern: 'dist/vendor/reflect-metadata/Reflect.js', included: true, watched: false },

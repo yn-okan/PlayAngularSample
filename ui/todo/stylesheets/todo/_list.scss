@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+todo-list {
+  display: block;
+  padding: 20px 0;
+
+  td {
+    padding: 20px !important;
+
+    &.content {
+      width: 70%;
+    }
+
+    &.action {
+      width: 30%;
+      text-align: right;
+      white-space: nowrap;
+
+      a {
+        color: #aaa;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1em;
+        margin-right: 5px;
+        @include transition(.2s);
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          color: darken(#aaa, 10%);
+        }
+      }
+    }
+
+    .content-inner {
+      font-size: 20px;
+      overflow: hidden;
+      height: 1em;
+      line-height: 1em;
+      @include transition(.2s);
+    }
+
+    .text {
+      color: #666;
+      display: inline-block;
+      width: 95%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: darken(#666, 20%);
+      }
+
+      &.full {
+        color: darken(#666, 20%);
+        overflow: initial;
+        text-overflow: initial;
+        white-space: initial;
+        text-decoration: initial;
+      }
+    }
+  }
+
+  .paging-toolbar {
+    padding: 10px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+
+      li {
+        color: #999;
+        display: inline-block;
+        font-size: 16px;
+        padding: 5px 10px;
+        cursor: pointer;
+
+        &.active {
+          color: #333;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

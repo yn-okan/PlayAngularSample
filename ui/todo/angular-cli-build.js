@@ -15,6 +15,8 @@ module.exports = function(defaults) {
       'es6-shim/es6-shim.js',
       'reflect-metadata/**/*.+(ts|js|js.map)',
       'rxjs/**/*.+(js|js.map)',
+      'jquery/dist/jquery.js',
+      'underscore/underscore.js',
       '@angular/**/*.+(js|js.map)'
     ]
   });

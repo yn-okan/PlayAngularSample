@@ -8,23 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/main.css")">
   </head>
   <body>
     <app-root>Loading...</app-root>
 
-
-
+    <script src="@routes.Assets.versioned("dist/vendor/jquery/dist/jquery.js")"></script>
+    <script src="@routes.Assets.versioned("dist/vendor/underscore/underscore.js")"></script>
     <script src="@routes.Assets.versioned("dist/vendor/es6-shim/es6-shim.js")"></script>
     <script src="@routes.Assets.versioned("dist/vendor/reflect-metadata/Reflect.js")"></script>
     <script src="@routes.Assets.versioned("dist/vendor/systemjs/dist/system.src.js")"></script>
     <script src="@routes.Assets.versioned("dist/vendor/zone.js/dist/zone.js")"></script>
     <script src="@routes.Assets.versioned("dist/system-config.js")"></script>
     <script src="@routes.Assets.versioned("dist/main.js")"></script>
-    <script>
-      System.import('main');
-    </script>
-
-
-
+    <script>System.import('main');</script>
   </body>
 </html>

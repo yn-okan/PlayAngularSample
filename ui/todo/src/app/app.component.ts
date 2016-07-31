@@ -8,10 +8,16 @@ import { TodoRegistComponent } from './view/todo/regist';
   selector: 'app-root',
   template: `
     <div class="container">
-      <h1>{{title}}</h1>
-      <nav>
-        <a [routerLink]="['/todo']" routerLinkActive="active">一覧</a>
-        <a [routerLink]="['/todo/create']" routerLinkActive="active">新規作成</a>
+      <nav class="navbar navbar-default">
+        <h1 class="app-title navbar-brand">{{title}}</h1>
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a [routerLink]="['/todo']" routerLinkActive="active">一覧</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/todo/create']" routerLinkActive="active">新規作成</a>
+          </li>
+        </ul>
       </nav>
       <router-outlet></router-outlet>
     </div>
